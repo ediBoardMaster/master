@@ -8,7 +8,7 @@
                     <div class="body block-header">
                         <div class="row">
                             <div class="col-lg-6 col-md-8 col-sm-12">
-                                <h2>Stater Page</h2>
+                                <h2>Page Name - Let it be for awhile</h2>
                                 <ul class="breadcrumb p-l-0 p-b-0 ">
                                     <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
                                     <li class="breadcrumb-item"><a href="javascript:void(0);">Pages</a></li>
@@ -33,7 +33,7 @@
         </div>
 
         @yield('content')
-        @include('layouts.footer')
+        @include('layouts.content.footer')
 
     </div>
 </section>

@@ -30,11 +30,11 @@
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
 
-    @include('layouts.top_navbar')
-    @include('layouts.leftsidebar')
-    @include('layouts.rightsidebar')
-    @include('layouts.content')
-    @include('layouts.js')
+    @include('layouts.content.top_navbar')
+    @include('layouts.content.leftsidebar')
+    @include('layouts.content.rightsidebar')
+    @include('layouts.content.content')
+    @include('layouts.content.js')
 
 </body>
 </html>
