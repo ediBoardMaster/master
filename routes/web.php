@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/layout', function () {
+Route::get('/content-layout', function () {
     return view('layouts.master');
+});
+Route::get('/auth-layout', function () {
+    return view('layouts.auth');
 });
