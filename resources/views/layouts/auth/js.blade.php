@@ -4,5 +4,6 @@
 
 <!-- Lib Scripts Plugin Js -->
 <script src="{{ asset('plugins/particles-js/particles.min.js') }}"></script>
+<script src="{{ asset('plugins/particles-js/particles.js') }}"></script>
 
 @yield('js')
