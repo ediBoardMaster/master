@@ -34,7 +34,7 @@
 
     </div>
     <div class="footer">
-        <a href="javascript:$('form').submit();" class="btn btn-primary btn-round btn-block">SIGN IN</a>
+        <button class="btn btn-primary btn-round btn-block" type="submit">SIGN IN</button>
         <a href="{{ route('register') }}" class="btn btn-primary btn-simple btn-round btn-block">SIGN UP</a>
     </div>
 </form>
