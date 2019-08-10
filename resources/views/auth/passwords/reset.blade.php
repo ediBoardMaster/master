@@ -32,7 +32,7 @@
     </div>
     <div class="input-group">
 
-        <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password" placeholder="New Password">
+        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="New Password">
         <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
 
     </div>
