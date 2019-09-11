@@ -8,10 +8,9 @@
     <!-- Favicon-->
     <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}">
+    @yield('css')
     <!-- Custom Css -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/color_skins.css') }}">
-
-    @yield('css')
 
 </head>
