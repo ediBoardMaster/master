@@ -97,7 +97,7 @@
 			</div>
 			<div class="col-lg-10 col-md-10 col-sm-8">
 				<div class="form-group">
-					<input type="text" name="Address_line_1" class="form-control">
+					<input type="text" name="Address_line_1" class="form-control" placeholder="Address">
 				</div>
 			</div>
 		</div>
@@ -107,7 +107,7 @@
 			</div>
 			<div class="col-lg-10 col-md-10 col-sm-8">
 				<div class="form-group">
-					<input type="text" name="Address_line_2" class="form-control">
+					<input type="text" name="Address_line_2" class="form-control" placeholder="Address">
 				</div>
 			</div>
 		</div>
@@ -117,7 +117,7 @@
 			</div>
 			<div class="col-lg-10 col-md-10 col-sm-8">
 				<div class="form-group">
-					<input type="text" name="Address_line_3" class="form-control">
+					<input type="text" name="Address_line_3" class="form-control" placeholder="Address">
 				</div>
 			</div>
 		</div>
@@ -127,7 +127,7 @@
 			</div>
 			<div class="col-lg-10 col-md-10 col-sm-8">
 				<div class="form-group">
-					<input type="text" name="city" class="form-control">
+					<input type="text" name="city" class="form-control" placeholder="Enter the city">
 				</div>
 			</div>
 		</div>
@@ -147,25 +147,54 @@
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-3">
 				<div class="form-group">
-					<input type="text" class="form-control" name="zip_code">
+					<input type="text" class="form-control" name="zip_code" placeholder="ZIP Code">
 				</div>
 			</div>
 		</div>
 	</section>
 	<h2>Logo Upload</h2>
 	<section>
-		<div class="form-group dz">
-			<div class="dz-message">
-				<div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
-				<h4>Drop files here or click to upload.</h4>
-				<em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
-				<div class="fallback">
-					<input name="file" type="file"/>
+		<div class="form-group">
+			<input name="logo" type="file" onchange="readURL(this);" accept="image/*"/>
+		</div>
+		<dir class="put_image">
+			<img src="" style="display: none;" class="logo_preview">
+		</dir>
+	</section>
+	<h2>Submission Setting</h2>
+	<section>
+		<div class="row clearfix">
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<label><b>Presentaion Mode</b></label>
+			</div>
+		</div>
+		<div class="row clearfix">
+			@for ($i = 1; $i <= 5; $i++)
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="checkbox">
+					<input id="checkbox_{{ $i }}" type="checkbox">
+					<label for="checkbox_{{ $i }}">
+						Mode {{ $i }}
+					</label>
 				</div>
 			</div>
-		</section>
-		<h2>Submission Setting</h2>
-		<section>
-			<p></p>
-		</section>
-	</div>
+			@endfor
+		</div>
+		<div class="row clearfix mb-3">
+			<div class="col-lg-3 col-md-3 col-sm-4 form-control-label">
+				<label for="conference_type"><b>Submission structure</b></label>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-8">
+				<select class="form-control">
+					<option></option>
+					<option value="1">asd</option>
+				</select>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<label>flow kat sini</label>
+			</div>
+		</div>
+	</section>
+</div>
