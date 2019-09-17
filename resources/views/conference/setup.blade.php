@@ -33,7 +33,6 @@
 <!-- Bootstrap Select Css -->
 <link rel="stylesheet" href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.css') }}" />
 <link rel="stylesheet" href="{{ asset('plugins/jquery-steps/jquery.steps.css') }}" />
-<link rel="stylesheet" href="{{ asset('plugins/dropzone/dropzone.css') }}">
 @endsection
 
 @section('js')
@@ -60,22 +59,35 @@
 		$(event.currentTarget).find('[role="menu"] li:not(.disabled) a').addClass('waves-effect');
 	}
 </script>
-<script src="{{ asset('plugins/dropzone/dropzone.js') }}"></script> <!-- Dropzone Plugin Js --> 
 <script type="text/javascript">
-	targetElement=$("div.dz").parent();
-	targetElement.dropzone({ 
-		url: "xtao/lagi",
-		init: function()
-		{
-			targetElement.addClass("dropzone");
-			$(".dropzone").css({"background-color":"transparent"});
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				targetElement=$('.logo_preview');
+				targetElement.show();
+				if(!e.target.result.substring(0, 12).includes('data:image'))
+				{
+					targetElement.hide();
+					$('input[name=logo]').val('');
+					setTimeout(function(){
+						alert('Only image file type supported');
+					}, 25);
+					return false;
+				}
+				targetElement.attr('src', e.target.result);
+			};
+
+			reader.readAsDataURL(input.files[0]);
 		}
-	});
+	}
 </script>
 @endsection
 
+@section('style')
 <style type="text/css">
-	.dropzone{
-		background-color : transparent !important;
+	.logo_preview{
+		max-width:180px;
 	}
 </style>
+@endsection
