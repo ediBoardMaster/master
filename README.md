@@ -1,5 +1,5 @@
 # master
-- laravel ver. 5.8
+- laravel ver. 6.0
 
 # server-setup
 - always set 'public' folder as Documentroot
